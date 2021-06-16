@@ -20,6 +20,7 @@ public class PasswordValidator {
             }
         }
         if (specialCharCount > 0 && password.length() > 7) {
+            System.out.println("valid");
             this.validPassword = true;
             this.password = password;
         }

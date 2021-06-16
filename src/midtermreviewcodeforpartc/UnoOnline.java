@@ -18,6 +18,8 @@ import java.util.Scanner;
  */
 public class UnoOnline {
 
+    private User[] users = new User[100];//the users of the game
+    int numUsers = 0;
     /**
      * Main method with call to private run method, to encapsulate our
      * main functionality.
@@ -25,7 +27,12 @@ public class UnoOnline {
      * @param args - not used
      */
     public static void main (String[] args) {
-
+        UnoOnline unoGame = new UnoOnline();
+        unoGame.run();
+    }
+    
+    private void run()
+    {
         PasswordValidator validate = new PasswordValidator();
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter your desired user name: ");
@@ -46,11 +53,11 @@ public class UnoOnline {
                 break;
             }
         }//loop only ends when password is valid so now we create the User
-
         User newUser = new User(validate.getUserName(), validate.getPassword());
         System.out.println("New User Added");
         System.out.println("UserName: " + validate.getUserName());
         System.out.println("Password: just kidding can't show password");
-
+        users[numUsers] = newUser;
+        numUsers++;
     }//end run method
 }//end class
