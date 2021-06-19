@@ -13,11 +13,9 @@ package midtermreviewcodeforpartc;
  * @author William Ibarra modified June 16, 2021
  */
 public class User {
-    
+
     private String name;
     private String password;
-    private int userCount = 0;
-    private static int nextUserID;
 
     /**
      * a constructor that takes in the user's name and password
@@ -27,13 +25,8 @@ public class User {
      */
     public User (String givenName, String givenPass) {
         name = givenName;
-        password= givenPass;
-        //User addUser = new User(givenName, givenPass);
-       // for (int i = 0; i < this.users.length; i++) {
-         //   users[i] = addUser;
-          //  this.userCount = User.nextUserID;
-           // userCount++;
-        //}
+        password = givenPass;
+
     }
 
     /** The getter for the user name
@@ -70,24 +63,5 @@ public class User {
     public void setPassword (String givenPass) {
         password = givenPass;
     }
-/**
-    public User[] getUsers () {
-        return users;
-    }
-
-    public void setUsers (User[] users) {
-        this.users = users;
-    }
-**/
-    public int getUserCount () {
-        return userCount;
-    }
-
-    public void setUserCount (int userCount) {
-        this.userCount = userCount;
-    }
-    
-   
-
 
 }
